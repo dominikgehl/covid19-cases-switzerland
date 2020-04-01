@@ -65,9 +65,8 @@ def main():
 
     # Create a summery with the most important values in json to allow web devs to grab it
     summary = {
-        "totals": {dimension: df_by_dimension[dimension]["CH"][-1] for dimension in dimensions},
-        "changes": {dimension: df_by_dimension[dimension]["CH"][-1] - df_by_dimension[dimension]["CH"][-2]
-                    for dimension in dimensions},
+        "totals": {dimension: df["CH"][-1] for dimension, df in df_by_dimension.items()},
+        "changes": {dimension: df["CH"][-1] - df["CH"][-2] for dimension, df in df_by_dimension.items()},
         "updated_cantons": ",".join(
             [
                 canton
