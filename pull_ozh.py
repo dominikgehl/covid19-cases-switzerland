@@ -19,6 +19,7 @@ def get_date_range(dfs):
 
 def main():
     dimensions = {
+        'tested': {'csv': 'ncumul_tested', 'xlsx': 'Tested'},
         'cases': {'csv': 'ncumul_conf', 'xlsx': 'Cases'},
         'fatalities': {'csv': 'ncumul_deceased', 'xlsx': 'Fatalities'},
         'hospitalized': {'csv': 'ncumul_hosp', 'xlsx': 'Hospitalized'},
